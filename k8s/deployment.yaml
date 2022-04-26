@@ -15,5 +15,5 @@ spec:
         app: webpage
     spec:
       containers:
-      - image: httpd_prac:${IMG_TAG}
+      - image: ashishizofficial/httpd_prac:${IMG_TAG}
         name: webpage
