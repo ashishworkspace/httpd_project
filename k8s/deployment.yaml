@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: httpd_prac
+  name: httpd_prac
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd_prac
+  template:
+    metadata:
+      labels:
+        app: httpd_prac
+    spec:
+      containers:
+      - image: httpd_prac:${IMG_TAG}
+        name: httpd
